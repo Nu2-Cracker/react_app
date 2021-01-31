@@ -16,6 +16,8 @@ RUN mkdir /react_app
 WORKDIR /react_app
 
 RUN npm init -y
+COPY ./package.json /react_app
+
 #react
 RUN npm install react --save
 #react dom
@@ -25,4 +27,3 @@ RUN npm install webpack webpack-dev-server webpack-cli --save
 #babel
 RUN npm install babel-core babel-loader babel-preset-env  babel-preset-react html-webpack-plugin --save-dev
 
-CMD [ "npm",  "start" ]
