@@ -27,3 +27,4 @@ RUN npm install webpack webpack-dev-server webpack-cli --save
 #babel
 RUN npm install babel-core babel-loader babel-preset-env  babel-preset-react html-webpack-plugin --save-dev
 
+EXPOSE 8081
