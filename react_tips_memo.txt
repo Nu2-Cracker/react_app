@@ -4,3 +4,5 @@
 import React {component}<=こいつは消す
 
 class App extends React.Componentは親コンポーネントとか言われるやつかな
+
+次　https://www.tutorialspoint.com/reactjs/reactjs_component_api.htm
