@@ -10,9 +10,11 @@ RUN apt install -y sudo
 RUN apt install vim
 
 #node.js
-RUN sudo apt install -y nodejs
+#バージョンはあげたりしたらテストした上で変更すること
+RUN sudo apt install -y nodejs=v10.19.0
 #npm
-RUN sudo apt install -y npm
+#バージョンはあげたりしたらテストした上で変更すること
+RUN sudo apt install -y npm=6.14.4
 
 RUN mkdir /react_app
 WORKDIR /react_app
