@@ -1,0 +1,4 @@
+・reactはクラスのコンポーネント単位で使う
+
+コンポーネントwを定義するときは,import React from 'react'; .
+import React {component}<=こいつは消す
