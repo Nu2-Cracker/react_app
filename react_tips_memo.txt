@@ -2,3 +2,5 @@
 
 コンポーネントwを定義するときは,import React from 'react'; .
 import React {component}<=こいつは消す
+
+class App extends React.Componentは親コンポーネントとか言われるやつかな
