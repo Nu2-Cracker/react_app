@@ -36,10 +36,13 @@ ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH   $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
 
-RUN mkdir /react_app
-WORKDIR /react_app
+RUN mkdir  /prj && mkdir -p /prj/react_app
+WORKDIR /prj/react_app
+
 
 EXPOSE 8081
+
+# https://www.tutorialspoint.com/reactjs/reactjs_forms.htm
 
 # #npm install
 
