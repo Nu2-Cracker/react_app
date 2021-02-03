@@ -40,9 +40,10 @@ RUN mkdir  /prj && mkdir -p /prj/react_app
 WORKDIR /prj/react_app
 
 
-EXPOSE 8081
+EXPOSE 8001
 
+CMD [ "/bin/bash"]
 # https://www.tutorialspoint.com/reactjs/reactjs_forms.htm
 
-# #npm install
+
 

@@ -12,7 +12,7 @@ class App extends React.Component {
   };
   updateState(e){
     this.setState({data: e.target.value});
-  
+
   }
   render() {
     return (

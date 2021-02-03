@@ -1,0 +1,11 @@
+version: "2"
+services:
+  react_app:
+    image: my_react_env
+    container_name: react_env
+    build: .
+    volumes:
+      - ./react_app:/prj/react_app
+    tty: true
+    ports:
+      - "8001:8001"
