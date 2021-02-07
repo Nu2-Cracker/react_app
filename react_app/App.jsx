@@ -1,6 +1,13 @@
 import React from 'react';
+import Graph from 'vis-react';
+
+var NodeData = require("./data/nodeData.json")
+var edgeData = require("./data/edgeData.json")
 
 
+
+
+console.log(NodeData);
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -10,6 +17,7 @@ class App extends React.Component {
     }
     this.updateState = this.updateState.bind(this);
   };
+
   updateState(e){
     this.setState({data: e.target.value});
 
