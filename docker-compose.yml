@@ -6,6 +6,8 @@ services:
     build: .
     volumes:
       - ./react_app:/prj/react_app
+      - ./react_redux_app:/prj/react_redux_app
+
     tty: true
     ports:
       - "8001:8001"

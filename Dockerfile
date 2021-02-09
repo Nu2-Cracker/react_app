@@ -36,9 +36,9 @@ ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH   $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
 
-RUN mkdir  /prj && mkdir -p /prj/react_app
-WORKDIR /prj/react_app
-
+RUN mkdir  /prj && mkdir -p /prj/react_app && mkdir -p /prj/react_redux_app
+# WORKDIR /prj/react_app
+WORKDIR /prj/react_redux_app
 
 EXPOSE 8001
 

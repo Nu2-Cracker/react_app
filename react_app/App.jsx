@@ -1,50 +1,37 @@
 import React from 'react';
-import Graph from 'vis-react';
+import ReactDOM from 'react-dom';
 
-var NodeData = require("./data/nodeData.json")
-var edgeData = require("./data/edgeData.json")
-
-
-
-
-console.log(NodeData);
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
-      data: "Initial data..."
+      data: ''
     }
     this.updateState = this.updateState.bind(this);
+    this.clearInput = this.clearInput.bind(this);
   };
-
-  updateState(e){
-    this.setState({data: e.target.value});
-
+  updateState(e) {
+    this.setState({ data: e.target.value });
   }
+
+  clearInput() {
+    this.setState({ data: '' });
+    ReactDOM.findDOMNode(this.refs.myInput).focus();
+  }
+
+
+
   render() {
     return (
       <div>
-        <Content myDataProp = {this.state.data}
-        updateStateProp = {this.updateState}></Content>
-      </div>
-    );
-  }
-}
-
-class Content extends React.Component {
-  render() {
-    return (
-      <div>
-        <input type="text"
-        value={this.props.myDataProp}
-        onChange = {this.props.updateStateProp}/>
-        <h3>{this.props.myDataProp}</h3>
+        <input value={this.state.data} onChange={this.updateState}
+          ref="myInput" />
+        <button onClick={this.clearInput}>CLEAR</button>
+        <h4>{this.state.data}</h4>
       </div>
     )
   }
 }
 
-
 export default App;
-
